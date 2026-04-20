@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "against_hope"
+version = "0.1.0"
+description = "Exact correlated equilibria for succinct games (Jiang-Leyton-Brown 2011)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "numpy>=1.23",
+    "scipy>=1.10",
+]
+
+[project.optional-dependencies]
+gurobi = ["gurobipy>=10.0"]
+networks = ["networkx>=3.0"]
+tests = ["pytest>=7.0"]
+all = ["gurobipy>=10.0", "networkx>=3.0", "pytest>=7.0"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["against_hope*"]
