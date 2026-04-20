@@ -23,9 +23,7 @@ Many interesting games are **succinct**: their description is
 polynomial in `n` even though the normal form is exponential —
 congestion, graphical, anonymous, action-graph, … For such games,
 Jiang & Leyton-Brown showed that CE is still computable in **time
-polynomial in the succinct description**.  The paper is theoretical;
-no code was ever published by the authors or anyone else.  This repo
-fills that gap.
+polynomial in the succinct description**.  
 
 ---
 
@@ -54,7 +52,6 @@ assert v.is_ce, f"max violation = {v.max_violation}"
 print(f"CE support size: {(result.alpha > 1e-6).sum()}")
 ```
 
-Runs in ≈ 1 s on a laptop.
 
 ---
 
