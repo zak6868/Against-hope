@@ -264,38 +264,9 @@ impossible.  `against_hope` handles it on a laptop.
 
 ---
 
-## Examples
 
-Three worked examples in `examples/`:
 
-- `pigou_example.py` — congestion on two parallel edges, `n ∈ {10, 20, 50}`.
-- `graphical_games_example.py` — graph coloring on a 5×5 grid, best-shot
-  public goods on a 3-regular graph, ring majority with n=30.
-- `custom_game_example.py` — subclass `CompactGame` for a ring graphical
-  coordination game with `n = 30`.
-
-Run any of them:
-```bash
-PYTHONPATH=. python examples/pigou_example.py
-```
-
----
-
-## Tests
-
-61 unit + integration tests, all passing.  Includes:
-
-- Per-module correctness (ellipsoid, PR/JLB oracle, CE extraction).
-- Exact-CE verification on every sample output (`verify_ce`).
-- Ground-truth brute-force comparison on small games.
-
-```bash
-pytest tests/
-```
-
----
-
-## Caveats (honest)
+## Caveats
 
 This is a *reference* implementation, not a certified-exact one.
 
