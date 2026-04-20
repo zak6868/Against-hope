@@ -259,8 +259,7 @@ On Sioux-Falls-style grid games (3×3 grid, 3 routes per agent):
 | 50  | 450       | 1 ms     | 2 000 | 1 s       |
 | 100 | 900       | 2.4 ms   | 39 000| 90 s      |
 
-Normal form at n=100 would need ~10⁴⁷ profiles — physically
-impossible.  `against_hope` handles it on a laptop.
+
 
 ---
 
@@ -279,10 +278,6 @@ This is a *reference* implementation, not a certified-exact one.
 | **Affine costs only** | For congestion games; polynomial costs (BPR) are an easy extension (moment recursion). |
 | **No SCIP exact mode** | The paper's exact-arithmetic certification path is not wired up. |
 
-Points (1) and (2) together prevent a strict "exact CE certificate"
-claim in the paper-theoretical sense.  For most applications they are
-irrelevant — the output is a valid CE in practice, verified by
-`verify_ce`.
 
 ---
 
